@@ -1,0 +1,16 @@
+{
+  "name": "transparent-progressbar",
+  "description": "Transparent progressbar",
+  "main": "index.js",
+  "authors": [
+    "Igors Krasjukovs <tahq69@gmail.com> (https://github.com/tahq69)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "directive",
+    "progressbar"
+  ],
+  "moduleType": [],
+  "homepage": ""
+}

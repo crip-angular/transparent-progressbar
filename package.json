@@ -1,0 +1,16 @@
+{
+  "name": "transparent-progressbar",
+  "version": "1.0.0",
+  "description": "Transparent progressbar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "directive",
+    "progressbar"
+  ],
+  "author": "Igors Krasjukovs <tahq69@gmail.com> (https://github.com/tahq69)",
+  "license": "MIT"
+}
