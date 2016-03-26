@@ -15,6 +15,11 @@ crip.sass('resources/sass/styles.scss',
     'transparent-progressbar',
     'build');
 
+crip.copy(['./**/*', '!./gulpfile.js', '!./node_modules{,/**}', '!./bower_components{,/**}'],
+    '../../crip-laravel/boilerplate/packages/filemanager/bower_components/crip-transparent-progressbar',
+    'copy-for-filemanager',
+    '');
+
 gulp.task('default', function () {
     crip.gulp.start('crip-default');
     crip.watch();
