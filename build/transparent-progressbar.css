@@ -1,0 +1,6 @@
+.crip-transparent-progressbar .crip-progressbar {
+  background-color: rgba(200, 200, 200, 0.4);
+  -webkit-transition: width .75s;
+  transition: width .75s; }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlcy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRUksMkNBQXNCO0VBQ3RCLCtCQUF1QjtFQUF2Qix1QkFBdUIsRUFDeEIiLCJmaWxlIjoidHJhbnNwYXJlbnQtcHJvZ3Jlc3NiYXIuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNyaXAtdHJhbnNwYXJlbnQtcHJvZ3Jlc3NiYXIge1xyXG4gIC5jcmlwLXByb2dyZXNzYmFyIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjAwLCAyMDAsIDIwMCwgLjQpO1xyXG4gICAgdHJhbnNpdGlvbjogd2lkdGggLjc1cztcclxuICB9XHJcbn0iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0= */

@@ -6,21 +6,14 @@ crip.scripts([
         '**/*.js'],
     'transparent-progressbar',
     'scripts',
-    'resources',
+    'resources/js',
     'build');
 
-crip.scripts([
-        'crip-core.js',
-        'transparent-progressbar.js'],
-    'transparent-progressbar.all',
-    'scripts-full',
-    'build',
+crip.sass('resources/sass/styles.scss',
+    [],
+    'compile-sass',
+    'transparent-progressbar',
     'build');
-
-crip.copy(
-    'bower_components/crip-angular-core/build/*.js',
-    'build',
-    'copy-core-scripts');
 
 gulp.task('default', function () {
     crip.gulp.start('crip-default');

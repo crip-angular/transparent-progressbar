@@ -2,8 +2,6 @@
     'use strict';
 
     crip.transparentProgressbar =
-        ng.module('transparent-progressbar', [
-            'crip.core'
-        ]);
+        ng.module('crip.transparent-progressbar', []);
 
 })(angular, window.crip || (window.crip = {}));

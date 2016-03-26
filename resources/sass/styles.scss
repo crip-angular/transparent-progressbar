@@ -1,0 +1,6 @@
+.crip-transparent-progressbar {
+  .crip-progressbar {
+    background-color: rgba(200, 200, 200, .4);
+    transition: width .75s;
+  }
+}
