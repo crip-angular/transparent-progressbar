@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap 101 Template</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css">
-    <link rel="stylesheet" href="../../build/transparent-progressbar.min.css">
+    <link rel="stylesheet" href="../build/transparent-progressbar.min.css">
     <style>
         .crip-container {
             padding: 50px;
@@ -23,15 +23,16 @@
 <div class="crip-container">
     <span crip-progressbar="my_progress">
         <span ng-bind="my_progress"></span><br>
-        <img src="../img/crip_logo.jpg" alt="CRIP Logo">
+        <img src="img/crip_logo.jpg" alt="CRIP Logo">
     </span>
+    <input type="button" ng-click="resetProgress()" value="Reset">
 </div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
-<script src="../../build/transparent-progressbar.js"></script>
+<script src="../build/transparent-progressbar.js"></script>
 <script>
     (function (ng, crip) {
 
@@ -39,19 +40,28 @@
 
         crip.app.controller('RootCtrl', RootCtrl);
 
-        RootCtrl.$inject = ['$log', '$scope', '$interval'];
-        function RootCtrl($log, $scope, $interval) {
-            var stop;
-            $scope.my_progress = 0;
-            stop = $interval(function () {
-                $log.log($scope.my_progress);
+        RootCtrl.$inject = ['$log', '$scope', '$interval', '$timeout'];
+        function RootCtrl($log, $scope, $interval, $timeout) {
 
+            var stop = $interval(changeProgress, 100);
+
+            $scope.my_progress = 0;
+            $scope.resetProgress = resetProgress;
+
+            function changeProgress() {
                 if ($scope.my_progress < 100) {
                     $scope.my_progress += 5;
                 } else {
                     $interval.cancel(stop);
                 }
-            }, 100);
+            }
+
+            function resetProgress() {
+                $scope.my_progress = 0;
+                $timeout(function () {
+                    stop = $interval(changeProgress, 100);
+                }, 1000);
+            }
         }
 
     })(angular, crip);
